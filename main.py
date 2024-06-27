@@ -10,8 +10,8 @@ following = r'G:\omidh\Downloads\following.json'
 followers = r'G:\omidh\Downloads\followers_1.json'
 
 # Load the data from the files
-data1 = load_json_file(file_path1)
-data2 = load_json_file(file_path2)
+data1 = load_json_file(following)
+data2 = load_json_file(followers)
 
 def create_sets(data1, data2):
     set1 = set()
