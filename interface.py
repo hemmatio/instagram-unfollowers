@@ -52,6 +52,21 @@ def help_menu():
     close_button.pack(side='bottom')
 
 
+def run_difference():
+    """
+    Runs the difference method from main if both files are uploaded
+    :return:
+    """
+    if followingpath and followerspath:
+        data1 = main.load_json_file(followingpath)
+        data2 = main.load_json_file(followerspath)
+        set1, set2 = main.create_sets(data1, data2)
+        unfollowers = main.difference(set1, set2)
+        print(unfollowers)
+    else:
+        print("Please upload both files first.")
+
+
 # UI elements
 title = customtkinter.CTkLabel(interface, text="Instagram Unfollowers", font=("Helvetica", 50))
 title.grid(row=0, column=1, columnspan=2)
@@ -70,5 +85,11 @@ upload2.grid(row=3, column=0, sticky='w')
 upload2.configure(padx=20, pady=20)
 upload2_button = customtkinter.CTkButton(interface, text="Upload", command=lambda: upload_file(0))
 upload2_button.grid(row=3, column=1)
+
+run = customtkinter.CTkLabel(interface, text="Check unfollowers", font=("Helvetica", 30))
+run.grid(row=5, column=0, sticky='w')
+run.grid(padx=20, pady=20)
+run_button = customtkinter.CTkButton(interface, text="Run", command=run_difference)
+run_button.grid(row=5, column=1, pady=20)
 
 interface.mainloop()
