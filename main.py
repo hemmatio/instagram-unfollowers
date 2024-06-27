@@ -6,8 +6,8 @@ def load_json_file(file_path):
     return data
 
 # Specify the paths to your files
-file_path1 = r'G:\omidh\Downloads\following.json'
-file_path2 = r'G:\omidh\Downloads\followers_1.json'
+following = r'G:\omidh\Downloads\following.json'
+followers = r'G:\omidh\Downloads\followers_1.json'
 
 # Load the data from the files
 data1 = load_json_file(file_path1)
@@ -31,4 +31,4 @@ def difference(set1,set2):
     return set1 - set2
 
 # Get the difference between the two sets
-fuckers = difference(set1, set2)
+unfollowers = difference(set1, set2)
