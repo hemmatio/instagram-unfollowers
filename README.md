@@ -2,7 +2,7 @@
  See who unfollowed you on Instagram, without breaking Instagram TOS!
  To use this app, you must download your follower and following information in JSON format directly from Instagram.
 
-### Downloading My Data
+### Downloading Your Data
 <figure>
     <img src="https://raw.githubusercontent.com/hemmatio/instagram-unfollowers/main/images/1.png"
          alt="Step 1" width="250">
