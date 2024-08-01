@@ -5,6 +5,8 @@ import streamlit as st
 import json
 import main
 st.title('Instagram Unfollowers')
+st.write('An app made by [Omid Hemmati](https://github.com/hemmatio)')
+
 
 if 'helpbool' not in st.session_state:
     st.session_state['helpbool'] = False
